@@ -77,14 +77,15 @@ document.querySelector("#btnThemNV").onclick = function () {
   if (kiemtraRong(obj.email, "#tbEmail")) {
     valid &= kiemtraEmail(obj.email, "#tbEmail");
   }
-  if (kiemtraRong(obj.chucVu, "#chucvu", "Sếp", "Trưởng phòng", "Nhân viên")) {
-    valid &= checkgiatri(
-      obj.chucVu,
-      "#chucvu",
-      "Sếp",
-      "Trưởng phòng",
-      "Nhân viên"
-    );
+  valid &= checkgiatri(
+    obj.chucVu,
+    "#chucvu",
+    "Sếp",
+    "Trưởng phòng",
+    "Nhân viên"
+  );
+  if (kiemtraRong(obj.gioLam, "#tbGiolam")) {
+    valid &= kiemtraGioLam(obj.gioLam, "#tbGiolam", 80, 200);
   }
   if (!valid) {
     return;
