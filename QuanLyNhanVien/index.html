@@ -111,6 +111,7 @@
               class="collapse navbar-collapse"
               id="bs-example-navbar-collapse-1"
             >
+              <div class="btn btn-success mt-4"></div>
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Page</a></li>
                 <li><a href="#">Page</a></li>
@@ -334,9 +335,9 @@
                   </div>
                   <select class="form-control" id="chucvu">
                     <option>Chọn chức vụ</option>
-                    <option>Sếp</option>
-                    <option>Trưởng phòng</option>
-                    <option>Nhân viên</option>
+                    <option value="Sếp">Sếp</option>
+                    <option value="Trưởng phòng">Trưởng phòng</option>
+                    <option  value="Nhân viên">Nhân viên</option>
                   </select>
                 </div>
 
@@ -361,13 +362,18 @@
               </div>
             </form>
           </div>
-		  
+
           <!-- Modal footer -->
           <div class="modal-footer" id="modal-footer">
             <button id="btnThemNV" type="button" class="btn btn-success">
               Thêm người dùng
             </button>
-            <button id="btnCapNhat" type="button" class="btn btn-success">
+            <button
+              id="btnCapNhat"
+              type="button"
+              class="btn btn-success"
+              onclick="capNhat()"
+            >
               Cập nhật
             </button>
             <button
@@ -409,7 +415,7 @@
         });
       });
     </script>
-	<script src="../index.js"></script>
-	<script src="../validation.js"></script>
+    <script src="../index.js"></script>
+    <script src="../validation.js"></script>
   </body>
 </html>
